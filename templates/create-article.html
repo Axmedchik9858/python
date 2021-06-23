@@ -1,0 +1,17 @@
+{% extends 'base.html' %}<!--bu yerda extends orqali basehtml fayldan nasl olamiza-->
+
+{% block title %}
+biz haqimizdagi sahifa
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>maqolalarni qo`shish</h1>
+    <form method="post">
+        <input type="text" name="title" id="title" class="form-control" placeholder="nomini kriting"><br>
+        <textarea name="intro" id="intro" class="form-action" placeholder=" elon"></textarea><br>
+        <textarea name="text" id="text" class="form-action" placeholder="asosiy matnni kriting"></textarea><br>
+        <input type="submit" class="btn btn-success" value="yuborish">
+    </form>
+</div>   
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}<!--bu yerda extends orqali basehtml fayldan nasl olamiza-->
+
+{% block title %}
+{{ article.title }}<!--bu yerda habarni o`z nomini chiqaramiza-->
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <h1>{{ article.title }}<!--bu yerda habarni o`z nomini chiqaramiza--></h1>
+          
+        <div class="alert alert-info">
+            <p>{{ article.Text }}</p>
+            <p><b>date: {{ article.date.date() }}</b></p>
+            <a href="/posts/{{ article.id }}/del" class="btn btn-warning">ochirish</a><!--bu yerda posts da harbir malumot uchun id beriladi el.id bu id ni chaqirish uchun ishlatiladi-->
+            <a href="/posts/{{ article.id }}/update" class="btn btn-success">Qayta ishlash</a><!--bu yerda posts da harbir malumot uchun id beriladi el.id bu id ni chaqirish uchun ishlatiladi-->
+        </div>
+         
+    </div>    
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}<!--bu yerda extends orqali basehtml fayldan nasl olamiza-->
+
+{% block title %}
+xabarni yangilash
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>xabarni yangilash</h1>
+    <form method="post">
+        <input type="text" name="title" id="title" class="form-control" value="{{ article.title }}" placeholder="nomini kriting"><br>
+        <textarea name="intro" id="intro" class="form-control"  placeholder=" elon">{{ article.intro }}</textarea><br>
+        <textarea name="text" id="text" class="form-control"   placeholder="asosiy matnni kriting">{{ article.text }}</textarea><br>
+        <input type="submit" class="btn btn-success" value="yangilash">
+    </form>
+</div>   
+{% endblock %}

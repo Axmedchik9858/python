@@ -1,0 +1,30 @@
+{% extends 'base.html' %}<!--bu yerda extends orqali basehtml fayldan nasl olamiza-->
+
+{% block title %}
+hamma saytdagi habarlar
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-5"> 
+        <h1>Saytdagi hamma habarlar</h1>
+        
+
+        {% if articles|length > 0 %}
+        <!--{{ articles[0].title}}bu yerda articles massivini qiymatlarini title orqali aytimiz ekraniga chiqaramiz
+        !hozir articls da hamma qiymatni ekranga chiqarish usulini koramiza-->
+
+        <!--!hozir articls da hamma qiymatni sikl orqali ekranga chiqarish usulini koramiza-->
+        {% for el in articles %}    
+        <div class="alert alert-info">
+            <h2>{{ el.title }}</h2>
+            <p>{{ el.intro }}</p>
+            <p><b>date: {{ el.date.date() }}</b></p>
+            <a href="/posts/{{ el.id }}" class="btn btn-warning">umumiy</a><!--bu yerda posts da harbir malumot uchun id beriladi el.id bu id ni chaqirish uchun ishlatiladi-->
+        </div>
+         {% endfor %}
+
+        {% else %} 
+        <p>sahifamizda xabar yo`q</p>
+        {% endif %}
+    </div>    
+{% endblock %}

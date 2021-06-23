@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap');
+body {
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+}
+/*nav */
+nav
+{
+  padding-top:20px;
+}
+
+nav a
+{
+  font-family: 'Lemonada', cursive;
+  text-decoration: none;
+  color: rgb(16, 15, 15);
+}
+
+nav a:hover
+{
+  color:rgb(132, 107, 77)
+}
+
+nav img
+{
+  width: 35px;
+}
+
+.logo-text
+{
+  font-size: 20px;
+}
+/* end nav */
+
+.carusel
+{ 
+  margin-left:15%;
+  width: 70%;
+  
+
+}
+/*header*/
+.header
+{
+ padding: 50px;
+ text-align:justify;
+}
+
+.header h1
+{
+  font-family: 'Lemonada', cursive;
+}
+
+/*end header */
+
+.footer
+{
+  margin-top: 10px;
+}
